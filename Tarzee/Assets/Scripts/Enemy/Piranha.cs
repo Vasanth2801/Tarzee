@@ -6,7 +6,7 @@ public class Piranha : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            Debug.Log("Game Over");
+            UIManager.instance.GameOver();
         }
     }
 }

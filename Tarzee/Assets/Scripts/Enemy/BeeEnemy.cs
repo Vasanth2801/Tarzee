@@ -32,6 +32,14 @@ public class BeeEnemy : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            UIManager.instance.GameOver();
+        }
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
